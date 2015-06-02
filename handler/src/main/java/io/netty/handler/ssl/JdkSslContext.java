@@ -79,7 +79,7 @@ public abstract class JdkSslContext extends SslContext {
         List<String> protocols = new ArrayList<String>();
         addIfSupported(
                 supportedProtocolsSet, protocols,
-                "TLSv1.2", "TLSv1.1", "TLSv1");
+                "TLSv1.2", "TLSv1.1", "TLSv1", "SSLv2Hello");
 
         if (!protocols.isEmpty()) {
             PROTOCOLS = protocols.toArray(new String[protocols.size()]);
